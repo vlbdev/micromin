@@ -9,6 +9,9 @@
         Укажите свой API-ключ. Тестовый ключ НЕ БУДЕТ работать на других сайтах.
         Получить ключ можно в Кабинете разработчика: https://developer.tech.yandex.ru/keys/
     -->
+	<style>
+		.placeName{font-size:11px;color:grey;}
+	</style>
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru-RU&amp;apikey=50f72dd8-3703-4ee5-88a6-e0da47e9e14e" type="text/javascript"></script>
     <script src="https://yandex.st/jquery/2.2.3/jquery.min.js" type="text/javascript"></script>
 	
@@ -254,7 +257,7 @@ var uruhePlacemark = new ymaps.Placemark(
         [53.941769, 27.686041], {
             hintContent: ''
         }, {
-            iconLayout: ymaps.templateLayoutFactory.createClass('<div style="font-size:11px;color:grey;">Уручье</div>'),
+            iconLayout: ymaps.templateLayoutFactory.createClass('<div class="placeName">Уручье</div>'),
             // Описываем фигуру активной области "Прямоугольник".
             iconShape: {
                 type: 'Rectangle',
@@ -276,12 +279,11 @@ myMap.geoObjects.add(uruhePlacemark);
 
 
 
-
 var brilevihiPlacemark = new ymaps.Placemark(
         [53.848483, 27.482537], {
             hintContent: ''
         }, {
-            iconLayout: ymaps.templateLayoutFactory.createClass('<div style="font-size:11px;color:grey;">Брилевичи</div>'),
+            iconLayout: ymaps.templateLayoutFactory.createClass('<div class="placeName">Брилевичи</div>'),
             // Описываем фигуру активной области "Прямоугольник".
             iconShape: {
                 type: 'Rectangle',
@@ -319,6 +321,23 @@ myMap.geoObjects.add(brilevihiPlacemark);
 					});
 	
 	
+
+var serebrankaPlacemark = new ymaps.Placemark(
+        [53.862387, 27.602668], {
+            hintContent: ''
+        }, {
+            iconLayout: ymaps.templateLayoutFactory.createClass('<div class="placeName">Брилевичи</div>'),
+            // Описываем фигуру активной области "Прямоугольник".
+            iconShape: {
+                type: 'Rectangle',
+                // Прямоугольник описывается в виде двух точек - верхней левой и нижней правой.
+                coordinates: [
+                    [-25, -25], [25, 25]
+                ]
+            }
+        }
+    );
+myMap.geoObjects.add(serebrankaPlacemark);	
 	var serebranka = {'routs':[],'points':[],'polygon':
 				 [
 				 [
