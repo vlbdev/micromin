@@ -365,7 +365,22 @@ myMap.geoObjects.add(serebrankaPlacemark);
 					
 					
 					
-					
+var vesnankaPlacemark = new ymaps.Placemark(
+        [53.932712, 27.493065], {
+            hintContent: ''
+        }, {
+            iconLayout: ymaps.templateLayoutFactory.createClass('<div class="placeName">Веснянка</div>'),
+            // Описываем фигуру активной области "Прямоугольник".
+            iconShape: {
+                type: 'Rectangle',
+                // Прямоугольник описывается в виде двух точек - верхней левой и нижней правой.
+                coordinates: [
+                    [-25, -25], [25, 25]
+                ]
+            }
+        }
+    );
+myMap.geoObjects.add(vesnankaPlacemark);					
 	var vesnanka = {'routs':[],'points':[],'polygon':
 				 [
 				 [
