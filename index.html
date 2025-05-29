@@ -4,7 +4,7 @@
     <title>Районы кварталы</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-	<base href="https://tochki.spektrsveta.by/">
+	
     <!--
         Укажите свой API-ключ. Тестовый ключ НЕ БУДЕТ работать на других сайтах.
         Получить ключ можно в Кабинете разработчика: https://developer.tech.yandex.ru/keys/
@@ -405,8 +405,25 @@ myMap.geoObjects.add(vesnankaPlacemark);
 						myMap.geoObjects.add(myPolygon);
 						myMap.setBounds(myMap.geoObjects.getBounds(), {checkZoomRange: true, zoomMargin: 10});
 					});
-					
-	var rakovskoeshosse = {'routs':[],'points':[],'polygon':
+
+
+var rakovskoeshossePlacemark = new ymaps.Placemark(
+        [53.915820, 27.486750], {
+            hintContent: ''
+        }, {
+            iconLayout: ymaps.templateLayoutFactory.createClass('<div class="placeName">Раковское Шоссе</div>'),
+            // Описываем фигуру активной области "Прямоугольник".
+            iconShape: {
+                type: 'Rectangle',
+                // Прямоугольник описывается в виде двух точек - верхней левой и нижней правой.
+                coordinates: [
+                    [-25, -25], [25, 25]
+                ]
+            }
+        }
+    );
+myMap.geoObjects.add(rakovskoeshossePlacemark);		
+var rakovskoeshosse = {'routs':[],'points':[],'polygon':
 				 [
 				 [
 				 ['53.918862','27.471695999999998'],['53.919774','27.471878'],['53.920648','27.472291'],['53.921062','27.472613'],['53.922169999999994','27.473734'],['53.924298','27.476062'],['53.922917','27.491854999999997'],['53.922745','27.493236999999997'],['53.922604','27.493872'],['53.922101','27.495471'],['53.921724','27.496302'],['53.921110999999996','27.4973'],['53.918468999999995','27.500518999999997'],['53.913548','27.506355'],['53.913332999999994','27.5065'],['53.90998','27.506715999999997'],['53.910185999999996','27.505599999999998'],['53.910219','27.505104'],['53.910201','27.504395'],['53.908508999999995','27.480905999999997'],['53.907982999999994','27.473084999999998'],['53.914728999999994','27.472178']
