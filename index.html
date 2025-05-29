@@ -491,6 +491,23 @@ myMap.geoObjects.add(hizovkaPlacemark);
 					
 
 
+
+	var loshicaPlacemark = new ymaps.Placemark(
+        [53.841795, 27.576285], {
+            hintContent: ''
+        }, {
+            iconLayout: ymaps.templateLayoutFactory.createClass('<div class="placeName">Лошица</div>'),
+            // Описываем фигуру активной области "Прямоугольник".
+            iconShape: {
+                type: 'Rectangle',
+                // Прямоугольник описывается в виде двух точек - верхней левой и нижней правой.
+                coordinates: [
+                    [-25, -25], [25, 25]
+                ]
+            }
+        }
+    );
+myMap.geoObjects.add(loshicaPlacemark);						
 	var loshica = {'routs':[],'points':[],'polygon':
 				 [
 				 [
