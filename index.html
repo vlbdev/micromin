@@ -1228,7 +1228,6 @@
           myMap.setBounds(myMap.geoObjects.getBounds(), { checkZoomRange: true, zoomMargin: 10 });
         });
 
-
         var vostokPlacemark = new ymaps.Placemark(
           [53.938554, 27.643183],
           {
@@ -1326,7 +1325,6 @@
           myMap.setBounds(myMap.geoObjects.getBounds(), { checkZoomRange: true, zoomMargin: 10 });
         });
 
-
         var mayakPlacemark = new ymaps.Placemark(
           [53.931154, 27.652803],
           {
@@ -1398,6 +1396,26 @@
           myMap.geoObjects.add(myPolygon);
           myMap.setBounds(myMap.geoObjects.getBounds(), { checkZoomRange: true, zoomMargin: 10 });
         });
+
+        var magistrPlacemark = new ymaps.Placemark(
+          [53.931062, 27.671809],
+          {
+            hintContent: "",
+          },
+          {
+            iconLayout: ymaps.templateLayoutFactory.createClass('<div class="placeName">Магистр</div>'),
+            // Описываем фигуру активной области "Прямоугольник".
+            iconShape: {
+              type: "Rectangle",
+              // Прямоугольник описывается в виде двух точек - верхней левой и нижней правой.
+              coordinates: [
+                [-25, -25],
+                [25, 25],
+              ],
+            },
+          }
+        );
+        myMap.geoObjects.add(magistrPlacemark);
 
         var magistr = {
           routs: [],
