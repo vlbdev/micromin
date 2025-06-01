@@ -1470,6 +1470,26 @@
           myMap.setBounds(myMap.geoObjects.getBounds(), { checkZoomRange: true, zoomMargin: 10 });
         });
 
+        var akademgorodokPlacemark = new ymaps.Placemark(
+          [53.926881, 27.693398],
+          {
+            hintContent: "",
+          },
+          {
+            iconLayout: ymaps.templateLayoutFactory.createClass('<div class="placeName">Академгородок</div>'),
+            // Описываем фигуру активной области "Прямоугольник".
+            iconShape: {
+              type: "Rectangle",
+              // Прямоугольник описывается в виде двух точек - верхней левой и нижней правой.
+              coordinates: [
+                [-25, -25],
+                [25, 25],
+              ],
+            },
+          }
+        );
+        myMap.geoObjects.add(akademgorodokPlacemark);
+        
         var akademgorodok = {
           routs: [],
           points: [],
