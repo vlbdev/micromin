@@ -4762,6 +4762,30 @@
           myMap.setBounds(myMap.geoObjects.getBounds(), { checkZoomRange: true, zoomMargin: 10 });
         });
 
+
+
+
+        var romanovskayaslobodaPlacemark = new ymaps.Placemark(
+          [53.899851, 27.544638],
+          {
+            hintContent: "",
+          },
+          {
+            iconLayout: ymaps.templateLayoutFactory.createClass('<div class="placeName">Романовская Слобода</div>'),
+            // Описываем фигуру активной области "Прямоугольник".
+            iconShape: {
+              type: "Rectangle",
+              // Прямоугольник описывается в виде двух точек - верхней левой и нижней правой.
+              coordinates: [
+                [-25, -25],
+                [25, 25],
+              ],
+            },
+          }
+        );
+        myMap.geoObjects.add(romanovskayaslobodaPlacemark);
+
+
         var romanovskayasloboda = {
           routs: [],
           points: [],
