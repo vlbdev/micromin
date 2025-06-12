@@ -4685,6 +4685,28 @@
           myMap.setBounds(myMap.geoObjects.getBounds(), { checkZoomRange: true, zoomMargin: 10 });
         });
 
+
+        var tatarskayaslobodaPlacemark = new ymaps.Placemark(
+          [53.910023, 27.539840],
+          {
+            hintContent: "",
+          },
+          {
+            iconLayout: ymaps.templateLayoutFactory.createClass('<div class="placeName">Татарская Слобода</div>'),
+            // Описываем фигуру активной области "Прямоугольник".
+            iconShape: {
+              type: "Rectangle",
+              // Прямоугольник описывается в виде двух точек - верхней левой и нижней правой.
+              coordinates: [
+                [-25, -25],
+                [25, 25],
+              ],
+            },
+          }
+        );
+        myMap.geoObjects.add(tatarskayaslobodaPlacemark);
+
+
         var tatarskayasloboda = {
           routs: [],
           points: [],
