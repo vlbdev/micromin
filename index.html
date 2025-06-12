@@ -4460,6 +4460,26 @@
           myMap.setBounds(myMap.geoObjects.getBounds(), { checkZoomRange: true, zoomMargin: 10 });
         });
 
+        var raduznyjPlacemark = new ymaps.Placemark(
+          [53.940209, 27.487879],
+          {
+            hintContent: "",
+          },
+          {
+            iconLayout: ymaps.templateLayoutFactory.createClass('<div class="placeName">Радужный</div>'),
+            // Описываем фигуру активной области "Прямоугольник".
+            iconShape: {
+              type: "Rectangle",
+              // Прямоугольник описывается в виде двух точек - верхней левой и нижней правой.
+              coordinates: [
+                [-25, -25],
+                [25, 25],
+              ],
+            },
+          }
+        );
+        myMap.geoObjects.add(raduznyjPlacemark);
+
         var raduznyj = {
           routs: [],
           points: [],
