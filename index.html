@@ -5153,6 +5153,26 @@
           myMap.setBounds(myMap.geoObjects.getBounds(), { checkZoomRange: true, zoomMargin: 10 });
         });
 
+        var troitskoepredmestiePlacemark = new ymaps.Placemark(
+          [53.908319, 27.556527],
+          {
+            hintContent: "",
+          },
+          {
+            iconLayout: ymaps.templateLayoutFactory.createClass('<div class="placeName">Троицкое Предместье</div>'),
+            // Описываем фигуру активной области "Прямоугольник".
+            iconShape: {
+              type: "Rectangle",
+              // Прямоугольник описывается в виде двух точек - верхней левой и нижней правой.
+              coordinates: [
+                [-25, -25],
+                [25, 25],
+              ],
+            },
+          }
+        );
+        myMap.geoObjects.add(troitskoepredmestiePlacemark);
+
         var troitskoepredmestie = {
           routs: [],
           points: [],
