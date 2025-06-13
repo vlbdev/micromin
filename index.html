@@ -4907,6 +4907,26 @@
           myMap.setBounds(myMap.geoObjects.getBounds(), { checkZoomRange: true, zoomMargin: 10 });
         });
 
+        var storozovkaPlacemark = new ymaps.Placemark(
+          [53.915422, 27.559343],
+          {
+            hintContent: "",
+          },
+          {
+            iconLayout: ymaps.templateLayoutFactory.createClass('<div class="placeName">Сторожовка</div>'),
+            // Описываем фигуру активной области "Прямоугольник".
+            iconShape: {
+              type: "Rectangle",
+              // Прямоугольник описывается в виде двух точек - верхней левой и нижней правой.
+              coordinates: [
+                [-25, -25],
+                [25, 25],
+              ],
+            },
+          }
+        );
+        myMap.geoObjects.add(storozovkaPlacemark);
+
         var storozovka = {
           routs: [],
           points: [],
@@ -4988,6 +5008,28 @@
           myMap.geoObjects.add(myPolygon);
           myMap.setBounds(myMap.geoObjects.getBounds(), { checkZoomRange: true, zoomMargin: 10 });
         });
+
+
+        var storozovkaPlacemark = new ymaps.Placemark(
+          [53.915422, 27.559343],
+          {
+            hintContent: "",
+          },
+          {
+            iconLayout: ymaps.templateLayoutFactory.createClass('<div class="placeName">Сторожовка</div>'),
+            // Описываем фигуру активной области "Прямоугольник".
+            iconShape: {
+              type: "Rectangle",
+              // Прямоугольник описывается в виде двух точек - верхней левой и нижней правой.
+              coordinates: [
+                [-25, -25],
+                [25, 25],
+              ],
+            },
+          }
+        );
+        myMap.geoObjects.add(storozovkaPlacemark);
+        
 
         var traktorozavodskoyposelok = {
           routs: [],
